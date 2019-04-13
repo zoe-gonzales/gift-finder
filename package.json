@@ -1,0 +1,26 @@
+{
+  "name": "gift-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoe-gonzales/gift-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoe-gonzales/gift-finder/issues"
+  },
+  "homepage": "https://github.com/zoe-gonzales/gift-finder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.16.0",
+    "sequelize": "^5.3.5"
+  }
+}
