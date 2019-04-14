@@ -1,11 +1,22 @@
 body {
     background-color: #FFC0BF;
+    margin: 4rem 0;
 }
 
 .h1 {
     margin: 7rem 0;
     font-family: 'Carter One', cursive;
     font-size: 3.25rem;
+}
+
+.h3 {
+    margin: 3rem 0;
+    font-family: 'Carter One', cursive;
+    font-size: 2.5rem;
+}
+
+.h4 {
+    font-family: 'Carter One', cursive;
 }
 
 .btn {
@@ -18,4 +29,20 @@ body {
     background-color: #403333;
     border-color: #403333;
     color: antiquewhite;
+}
+
+.form-check-label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-check {
+    margin-bottom: 2rem;
+}
+
+.form-check-label {
+    margin: 0 .5rem;
+}
+
+.submit-btn {
+    float: right;
 }

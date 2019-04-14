@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="intro animated fadeOut delay-3s" id="content">
+                <p class="h3 animated fadeIn">1. Answer questions.</p>
+                <p class="h3 animated fadeIn delay-1s">2. Get ideas.</p>
+                <p class="h3 animated fadeIn delay-2s">3. Submit your ideas.</p>
+            </div>
+            {{!-- User form --}}
+            <form id="survey" class="animated fadeIn">
+                <p class="h4">Giftee Interests - select all that apply</p>
+                {{#each categories}}
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="{{this.dataValues.id}}">{{this.dataValues.category}}
+                    </label>
+                </div>
+                {{/each}}
+                <p class="h4">Do they like homemade gifts?</p>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="homemade" value="1">Yes
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="homemade" value="0">No
+                    </label>
+                </div>
+                <p class="h4">Price range</p>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="price" value="1">0-20
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="price" value="2">21-50
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="price" value="3">51-100
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="price" value="4">100+
+                    </label>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-outline-info">Get Ideas</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="/add" class="btn btn-outline-info submit-btn animated fadeIn">Submit ideas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row"></div>
+    <div class="row"></div>
+</div>
