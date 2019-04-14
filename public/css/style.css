@@ -1,0 +1,21 @@
+body {
+    background-color: #FFC0BF;
+}
+
+.h1 {
+    margin: 7rem 0;
+    font-family: 'Carter One', cursive;
+    font-size: 3.25rem;
+}
+
+.btn {
+    color: #403333;
+    border-color: #403333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn:hover {
+    background-color: #403333;
+    border-color: #403333;
+    color: antiquewhite;
+}
