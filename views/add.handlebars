@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-2">
+            <label for="gift-name" class="add-form-label">Gift Name</label> <br>
+            <label for="category" class="add-form-label">Category</label> <br>
+            <label for="homemade" class="add-form-label">Homemade</label> <br>
+            <label for="price" class="add-form-label">Price in dollars</label>
+        </div>
+        <div class="col-md-4">
+            <form id="add-idea">
+                <input class="form-control form-control-sm add-form" type="text" id="gift-name">
+                <select class="form-control form-control-sm add-form" id="category">
+                    {{#each category}}
+                    <option>{{this}}</option>
+                    {{/each}}
+                </select>
+                <select class="form-control form-control-sm add-form" id="homemade">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                <input class="form-control form-control-sm add-form" type="text" id="price">
+                <button type="submit" class="btn btn-outline-info submit-idea add-form">Submit Idea</button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row"></div>
+    <div class="row"></div>
+</div>

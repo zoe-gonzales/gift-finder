@@ -43,6 +43,15 @@ body {
     margin: 0 .5rem;
 }
 
-.submit-btn {
+.submit-btn,
+.submit-idea {
     float: right;
+}
+
+.add-form-label {
+    margin: .8rem 0;
+}
+
+.add-form {
+    margin: 1rem 0;
 }
