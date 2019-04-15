@@ -46,6 +46,14 @@ body {
 .submit-btn,
 .submit-idea {
     float: right;
+    margin: 1rem 0;
+}
+
+.back-btn {
+    float: left;
+    position: relative;
+    left: -7.5rem;
+    top: -2rem;
 }
 
 .add-form-label {
@@ -54,4 +62,13 @@ body {
 
 .add-form {
     margin: 1rem 0;
+}
+
+.top-row {
+    position: absolute;
+}
+
+#message {
+    margin: 1.25rem;
+    float: right;
 }

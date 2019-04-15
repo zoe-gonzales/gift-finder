@@ -13,17 +13,16 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: false
         },
         price: {
-            type: DataTypes.FLOAT,
-            defaultValue: false,
-            decimals: 2
+            type: DataTypes.STRING,
+            defaultValue: false
         },
         createdAt: {
             type: DataTypes.DATE,
             defaultValue: sequelize.literal('NOW()')
           },
         updatedAt: {
-        type: DataTypes.DATE,
-        defaultValue: sequelize.literal('NOW()')
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('NOW()')
         }
     });
 

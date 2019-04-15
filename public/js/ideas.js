@@ -11,4 +11,33 @@ $(document).ready(function(){
 
     setTimeout(moveSurvey, 4000);
 
+    $("#add-idea").on("submit", function(event){
+        event.preventDefault();
+
+        var name = $("#add-idea [name=gift-name]").val().trim();
+        var category = $("#add-idea [name=category]").val();
+        var homemade = $("#add-idea [name=homemade]").val();
+        var price = $("#add-idea [name=price]").val().trim();
+
+        var newIdea = {};
+
+        if (!name){
+            $("#message").text("Please complete all fields.");
+        } else {
+            newIdea.gift_name = name;
+            newIdea.category = category;
+            newIdea.price = price;
+        }
+
+        if (homemade === "No"){
+            newIdea.isHomemade = 0;
+        } else newIdea.isHomemade = 1;
+        
+        $.ajax("/add", {
+            method: "POST",
+            data: newIdea
+        }).then(function(){
+            location.reload();
+        });
+    });
 });

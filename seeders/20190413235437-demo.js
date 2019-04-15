@@ -11,25 +11,67 @@ module.exports = {
         gift_name: 'Headphones',
         category: 'Tech',
         isHomemade: false,
-        price: 40.00
+        price: '21-50'
       },
       {
         gift_name: 'Camelbak',
         category: 'Outdoors',
         isHomemade: false,
-        price: 70.00
+        price: '51-100'
       },
       {
-        gift_name: 'Crema Coffee Subscription',
+        gift_name: 'Coffee Subscription',
         category: 'Food & Dining',
         isHomemade: false,
-        price: 50.00
+        price: '51-100'
       },
       {
         gift_name: 'Handmade scarf',
         category: 'Fashion',
         isHomemade: true,
-        price: 25.00
+        price: '21-50'
+      },
+      {
+        gift_name: 'FitBit',
+        category: 'Health & Fitness',
+        isHomemade: false,
+        price: '51-100'
+      },
+      {
+        gift_name: 'Band t-shirt',
+        category: 'Music',
+        isHomemade: false,
+        price: '21-50'
+      },
+      {
+        gift_name: 'Painting class',
+        category: 'Art',
+        isHomemade: false,
+        price: '21-50'
+      },
+      {
+        gift_name: 'Dog sweater',
+        category: 'Pets',
+        isHomemade: false,
+        price: '21-50'
+      },
+      {
+        gift_name: 'Duffel bag',
+        category: 'Travel',
+        isHomemade: false,
+        price: '51-100'
+      },
+      {
+        gift_name: 'Netflix Subscription for 6 months',
+        category: 'TV',
+        isHomemade: false,
+        price: '51-100'
+      },
+      {
+        gift_name: 'Face mask',
+        category: 'Beauty & Skincare',
+        isHomemade: false,
+        price: '0-20'
       }
   ], {});
 

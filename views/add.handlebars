@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="row top-row">
+        <a href="/results" class="btn btn-outline-info back-btn">Back to ideas</a>
+    </div>
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-2">
@@ -9,20 +12,27 @@
         </div>
         <div class="col-md-4">
             <form id="add-idea">
-                <input class="form-control form-control-sm add-form" type="text" id="gift-name">
-                <select class="form-control form-control-sm add-form" id="category">
+                <input class="form-control form-control-sm add-form" type="text" name="gift-name" id="gift-name">
+                <select class="form-control form-control-sm add-form" id="category" name="category">
                     {{#each category}}
                     <option>{{this}}</option>
                     {{/each}}
                 </select>
-                <select class="form-control form-control-sm add-form" id="homemade">
+                <select class="form-control form-control-sm add-form" id="homemade" name="homemade">
                     <option>Yes</option>
                     <option>No</option>
                 </select>
-                <input class="form-control form-control-sm add-form" type="text" id="price">
+                <select class="form-control form-control-sm add-form" id="price" name="price">
+                    <option>0-20</option>
+                    <option>21-50</option>
+                    <option>51-100</option>
+                    <option>100+</option>
+                </select>
                 <button type="submit" class="btn btn-outline-info submit-idea add-form">Submit Idea</button>
             </form>
+            <div id="message"></div>
         </div>
+        
         <div class="col-md-3"></div>
     </div>
     <div class="row"></div>
