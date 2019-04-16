@@ -55,7 +55,7 @@ $(document).ready(function(){
         var price = $("#survey [name=price]:checked").val();
 
         if (!interests || !homemade || !homemade){
-            alert("Please select at least one option for each.");
+            $("#validateInput").text("Please select at least one option for each.");
         } else {
             ideaRequest.category = interests;
             ideaRequest.isHomemade = homemade;
@@ -66,8 +66,18 @@ $(document).ready(function(){
         $.ajax("/request", {
             method: "POST",
             data: ideaRequest
-        }).then(function(result){
-            console.log(result);
+        }).then(function(results){
+            var label = $("<div>");
+            label.addClass("h4 suggestions-title");
+            label.text("Your Suggestions");
+            $("#ideas").append(label);
+            
+            results.forEach(gift => {
+                var idea = $("<p>");
+                idea.addClass("giftIdea");
+                idea.text(gift.gift_name);
+                $("#ideas").append(idea);
+            });
         });
     });
 });

@@ -72,3 +72,29 @@ body {
     margin: 1.25rem;
     float: right;
 }
+
+#validateInput {
+    margin-top: .75rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #803B39;
+}
+
+.submit-page {
+    position: absolute;
+}
+
+.submit-btn {
+    float: right;
+    position: relative;
+    top: -2.5rem;
+    left: 15rem;
+}
+
+.giftIdea {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #403333;
+}
+
+.suggestions-title {
+    margin-top: 2rem;
+}
