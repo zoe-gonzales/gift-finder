@@ -43,6 +43,8 @@ $(document).ready(function(){
 
     $("#survey").on("submit", function(event){
         event.preventDefault();
+        $("#ideas").empty();
+
         var ideaRequest = {};
         var interests = [];
 
@@ -61,7 +63,6 @@ $(document).ready(function(){
             ideaRequest.isHomemade = homemade;
             ideaRequest.price = price;
         }
-
 
         $.ajax("/request", {
             method: "POST",
