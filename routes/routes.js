@@ -9,7 +9,14 @@ module.exports = function(app) {
     // Get Survey
     app.get('/questions', function(req, res){
         db.Idea.findAll({}).then(function(data){
-            res.render('survey', {categories: data});
+            var categories = [];
+            data.forEach(item => {
+                var giftCategory = item.dataValues.category;
+                if (!categories.includes(giftCategory)){
+                    categories.push(giftCategory);
+                }
+            });
+            res.render('survey', {categories: categories});
         });
     });
 
@@ -38,6 +45,25 @@ module.exports = function(app) {
 
     app.post('/add', function(req, res){
         db.Idea.create(req.body).then(function(result){
+            res.json(result);
+        });
+    });
+
+    app.post('/request', function(req, res){
+        var ideaRequest = {};
+
+        var homemade = req.body.isHomemade;
+        
+        if (parseInt(homemade) === 0){
+            ideaRequest.isHomemade = homemade;
+        }
+
+        ideaRequest.category = req.body.category;
+        ideaRequest.price = req.body.price;
+        
+        db.Idea.findAll({
+            where: ideaRequest
+        }).then(function(result){
             res.json(result);
         });
     });

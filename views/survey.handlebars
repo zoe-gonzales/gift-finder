@@ -13,7 +13,7 @@
                 {{#each categories}}
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="{{this.dataValues.id}}">{{this.dataValues.category}}
+                        <input class="form-check-input" type="checkbox" name="{{this}}" value="{{this}}">{{this}}
                     </label>
                 </div>
                 {{/each}}
@@ -29,16 +29,16 @@
                 <p class="h4">Price range</p>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="price" value="1">0-20
+                        <input class="form-check-input" type="radio" name="price" value="0-20">0-20
                     </label>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="price" value="2">21-50
+                        <input class="form-check-input" type="radio" name="price" value="21-50">21-50
                     </label>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="price" value="3">51-100
+                        <input class="form-check-input" type="radio" name="price" value="51-100">51-100
                     </label>
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="price" value="4">100+
+                        <input class="form-check-input" type="radio" name="price" value="100+">100+
                     </label>
                 </div>
                 <br>

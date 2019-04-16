@@ -17,7 +17,7 @@ $(document).ready(function(){
         var name = $("#add-idea [name=gift-name]").val().trim();
         var category = $("#add-idea [name=category]").val();
         var homemade = $("#add-idea [name=homemade]").val();
-        var price = $("#add-idea [name=price]").val().trim();
+        var price = $("#add-idea [name=price]").val();
 
         var newIdea = {};
 
@@ -38,6 +38,36 @@ $(document).ready(function(){
             data: newIdea
         }).then(function(){
             location.reload();
+        });
+    });
+
+    $("#survey").on("submit", function(event){
+        event.preventDefault();
+        var ideaRequest = {};
+        var interests = [];
+
+        $(".form-check input[type='checkbox']:checked").each((_, {value}) => {
+            interests.push(value);
+        });
+
+        var homemade = $("#survey [name=homemade]:checked").val();
+
+        var price = $("#survey [name=price]:checked").val();
+
+        if (!interests || !homemade || !homemade){
+            alert("Please select at least one option for each.");
+        } else {
+            ideaRequest.category = interests;
+            ideaRequest.isHomemade = homemade;
+            ideaRequest.price = price;
+        }
+
+
+        $.ajax("/request", {
+            method: "POST",
+            data: ideaRequest
+        }).then(function(result){
+            console.log(result);
         });
     });
 });
