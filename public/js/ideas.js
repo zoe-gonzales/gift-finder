@@ -68,17 +68,25 @@ $(document).ready(function(){
             method: "POST",
             data: ideaRequest
         }).then(function(results){
+
             var label = $("<div>");
             label.addClass("h4 suggestions-title");
             label.text("Your Suggestions");
             $("#ideas").append(label);
-            
-            results.forEach(gift => {
-                var idea = $("<p>");
-                idea.addClass("giftIdea");
-                idea.text(gift.gift_name);
-                $("#ideas").append(idea);
-            });
+
+            if (results.length === 0){
+                var noResults = $("<p>");
+                noResults.addClass("giftIdea");
+                noResults.text("It looks like your search didn't return results.");
+                $("#ideas").append(noResults);
+            } else {
+                results.forEach(gift => {
+                    var idea = $("<p>");
+                    idea.addClass("giftIdea");
+                    idea.text(gift.gift_name);
+                    $("#ideas").append(idea);
+                });
+            }
         });
     });
 });
